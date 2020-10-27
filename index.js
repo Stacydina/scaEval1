@@ -9,7 +9,7 @@ const catalogue = []
  * @param {String} sku Unique identifier for shopping item
  * @param {String} name The name of the shopping item
  * @param {Number} price The price of the current item
- * @param {Boolean} price The availability of the current item
+ * @param {Boolean} availability The availability of the current item
  * 
  * @returns {Object} A new item to be added to the catalogue
  */
