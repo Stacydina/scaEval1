@@ -1,13 +1,10 @@
-.notAvailable {
-    color: crimson;
-    padding: 10px;
-    border: 1px dotted crimson;
-}
+
 
 .available {
-    color: limegreen;
+    background-color: limegreen;
     padding: 10px;
     border: 1px dotted limegreen;
+    color: black;
 }
 
 #app {
