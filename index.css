@@ -1,0 +1,31 @@
+.notAvailable {
+    color: crimson;
+    padding: 10px;
+    border: 1px dotted crimson;
+}
+
+.available {
+    color: limegreen;
+    padding: 10px;
+    border: 1px dotted limegreen;
+}
+
+#app {
+    text-align: justify;
+    padding:  10 px;
+}
+
+li {
+border: 10px ;
+}
+
+@media screen and (max-width: 500px) {
+    div div {
+      width: 40%;
+      margin: 5%;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  

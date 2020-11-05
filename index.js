@@ -1,37 +1,42 @@
-/**
- * An array containing a catalogue of items
- */
-const catalogue = []
+// create my Catalogue array
+    const catalogue = [...Array(10).keys()]
+    .map((_, index) =>({
+        sku: index + 1,
+        name: `pet ${index +1}`,
+        amount: (Math.floor(Math.random() * 100)),
+        availability: true
+      
+     }));
+  
+  
+  // Display Elements on the browser   
+var html = catalogue.map(function (element) {
+    return  '<li>' + element.sku + ', ' +
+      element.name+ ', ' + element.amount + (',')   +'</li>';  
+ 
+      } ).join('');
+     
+  document.getElementById('item').innerHTML= html;
+   
+let buttonCreate = () =>{
+let button = document.createElement("button");
+button.innerText = "Buy";
+var body = document.getElementsByTagName("body")[0];
+body.appendChild(button);
+button.onclick = e =>{
 
-/**
- * Creates a new shopping item
- * 
- * @param {String} sku Unique identifier for shopping item
- * @param {String} name The name of the shopping item
- * @param {Number} price The price of the current item
- * @param {Boolean} availability The availability of the current item
- * 
- * @returns {Object} A new item to be added to the catalogue
- */
-function createNewItem(sku, name, price, availability) {}
+}
+};
+    
 
-/**
- * Toggles the availability of an item
- * 
- * @param {Object} item An item in the catalogue
- * 
- * @returns null
- */
-function setAvailability(item) {}
 
-/**
- * Maps over all the items in the catalogue and stores them in a div
- * 
- * @returns {HTMLDivElement} Catalogue
- */
-function App() {}
+    
 
-// Your code goes here, all the best ;)
+     
 
-const rootElement = document.getElementById('app')
-rootElement.appendChild(App())
+ 
+ 
+
+
+   
+  
