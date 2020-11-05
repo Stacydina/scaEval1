@@ -15,7 +15,7 @@ var html = catalogue.map(function (element) {
       
       let buttonCreate = () =>{
         let button = document.createElement("button");
-        button.innerText = "Buy";
+        button.innerText = "Available";
         
         var body = document.getElementsByTagName("body")[0];
         body.appendChild(button);
@@ -23,19 +23,20 @@ var html = catalogue.map(function (element) {
           var clicking = document.getElementById('item');
           
           button.innerHTML = "available";
-          if (element.available == true){
+          if (element.index %2 == 0){
             
-            clicking.classList.add("success");
+            clicking.classList.toggle("success");
             button.innerHTML = "available"
           }
           else{
-            clicking.classList.add("notAvailable");
+            clicking.classList.toggle("notAvailable");
             button.innerHTML = "Not available"
           }
           
         
         }
         };
+        let Button = buttonCreate();
        
     return  '<li>' + element.sku   +',' +
       element.name+ ', ' + element.amount + (',') + element.presence + (',')  +'</li>';  
