@@ -7,8 +7,15 @@
     color: black;
 }
 
+.notAvailable{
+  background-color: crimson;
+  padding: 5px;
+  border: 1px dotted crimson;
+  color: black;
+}
+
 #app {
-    text-align: justify;
+    text-align: center;
     padding:  10 px;
 }
 

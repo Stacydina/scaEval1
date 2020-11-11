@@ -5,6 +5,7 @@
         name: `pet ${index +1}`,
         amount: (Math.floor(Math.random() * 100)),
         presence: true,
+        
       
      }));
   
@@ -16,6 +17,7 @@ var html = catalogue.map(function (element) {
       let buttonCreate = () =>{
         let button = document.createElement("button");
         button.innerText = "Available";
+      
         
         var body = document.getElementsByTagName("body")[0];
         body.appendChild(button);
@@ -23,14 +25,16 @@ var html = catalogue.map(function (element) {
           var clicking = document.getElementById('item');
           
           button.innerHTML = "available";
-          if (element.index %2 == 0){
+          if ( element.presence == true){
             
-            clicking.classList.toggle("success");
-            button.innerHTML = "available"
+            button.innerHTML = "Not available"
+             element.presence = false  
+           
           }
           else{
-            clicking.classList.toggle("notAvailable");
-            button.innerHTML = "Not available"
+         
+            button.innerHTML = "available"
+            element.presence =true
           }
           
         
@@ -39,7 +43,7 @@ var html = catalogue.map(function (element) {
         let Button = buttonCreate();
        
     return  '<li>' + element.sku   +',' +
-      element.name+ ', ' + element.amount + (',') + '</li>';  
+      element.name+ ', ' + element.amount + (',')+ element.presence +  '</li>';  
  
       } ).join('');
       
