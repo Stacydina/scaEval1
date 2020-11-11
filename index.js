@@ -39,7 +39,7 @@ var html = catalogue.map(function (element) {
         let Button = buttonCreate();
        
     return  '<li>' + element.sku   +',' +
-      element.name+ ', ' + element.amount + (',') + element.presence + (',')  +'</li>';  
+      element.name+ ', ' + element.amount + (',') + '</li>';  
  
       } ).join('');
       
